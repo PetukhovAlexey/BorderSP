@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BorderSp", "BorderSp\BorderSp.vcxproj", "{31BEB285-BAD7-4EFD-8B94-ECCD6472A42B}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "testApp2022", "testApp2022\testApp2022.vcxproj", "{17EA966F-3873-4461-8DDC-2210D9E3593B}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "testDll2010", "testDll2010\testDll2010.vcxproj", "{D0358959-D087-42AD-B93F-12AACF1483AD}"
@@ -23,17 +21,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{31BEB285-BAD7-4EFD-8B94-ECCD6472A42B}.Debug|ARM.ActiveCfg = Debug|Win32
-		{31BEB285-BAD7-4EFD-8B94-ECCD6472A42B}.Debug|Win32.ActiveCfg = Debug|Win32
-		{31BEB285-BAD7-4EFD-8B94-ECCD6472A42B}.Debug|x64.ActiveCfg = Debug|x64
-		{31BEB285-BAD7-4EFD-8B94-ECCD6472A42B}.Debug|x64.Build.0 = Debug|x64
-		{31BEB285-BAD7-4EFD-8B94-ECCD6472A42B}.Debug|x86.ActiveCfg = Debug|Win32
-		{31BEB285-BAD7-4EFD-8B94-ECCD6472A42B}.Debug|x86.Build.0 = Debug|Win32
-		{31BEB285-BAD7-4EFD-8B94-ECCD6472A42B}.Release|ARM.ActiveCfg = Release|Win32
-		{31BEB285-BAD7-4EFD-8B94-ECCD6472A42B}.Release|Win32.ActiveCfg = Release|Win32
-		{31BEB285-BAD7-4EFD-8B94-ECCD6472A42B}.Release|x64.ActiveCfg = Release|x64
-		{31BEB285-BAD7-4EFD-8B94-ECCD6472A42B}.Release|x86.ActiveCfg = Release|Win32
-		{31BEB285-BAD7-4EFD-8B94-ECCD6472A42B}.Release|x86.Build.0 = Release|Win32
 		{17EA966F-3873-4461-8DDC-2210D9E3593B}.Debug|ARM.ActiveCfg = Debug|Win32
 		{17EA966F-3873-4461-8DDC-2210D9E3593B}.Debug|Win32.ActiveCfg = Debug|Win32
 		{17EA966F-3873-4461-8DDC-2210D9E3593B}.Debug|x64.ActiveCfg = Debug|x64
