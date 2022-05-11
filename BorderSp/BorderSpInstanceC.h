@@ -144,7 +144,11 @@ struct AtomicCounterC
 
     static unsigned long __stdcall DoLoadValue(void* counterInstance, unsigned long* counter)
     {
+#if _MSC_VER > 1930
         return static_cast<unsigned long>(__iso_volatile_load32(reinterpret_cast<__int32*>(counter)));
+#else
+        return *counter;
+#endif
     }
 
 private:
@@ -534,6 +538,7 @@ public:
         SharedPointerC::NewSharedPointerPtr(&m_releaseC, ptr, &deleter);
     }
 
+#if _MSC_VER > 1930
     template <class _Ux, class _Dx,
         std::enable_if_t<std::conjunction_v<std::is_move_constructible<_Dx>, std::_Can_call_function_object<_Dx&, _Ux*&>,
         std::_SP_convertible<_Ux, _Ty>>,
@@ -543,7 +548,9 @@ public:
     {
         Setpd(ptr, std::move(free));
     }
+#endif
 
+#if _MSC_VER > 1930
     template <class _Ux, class _Dx, class _Alloc,
         std::enable_if_t<std::conjunction_v<std::is_move_constructible<_Dx>, std::_Can_call_function_object<_Dx&, _Ux*&>,
         std::_SP_convertible<_Ux, _Ty>>,
@@ -551,6 +558,7 @@ public:
         SharedPtr(_Ux* _Px, _Dx _Dt, _Alloc _Ax) { // construct with _Px, deleter, allocator
         _Setpda(_Px, _STD move(_Dt), _Ax);
     }
+#endif
 
     SharedPtr(const SharedPtr& cb) :
         m_releaseC()
